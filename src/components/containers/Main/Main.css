@@ -1,0 +1,5 @@
+.main-container {
+  border: 1px solid hsl(0, 0%, 85%);
+  margin: 1rem;
+  padding: 1.5rem;
+}

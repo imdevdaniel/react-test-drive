@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { TestComponent } from './components/TestComponent/TestComponent';
-import { Button } from './components/Button/Button';
+import { Main } from './components/containers/Main/Main';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TestComponent />
-    <Button />
+    <Main />
   </React.StrictMode>
 );
 
