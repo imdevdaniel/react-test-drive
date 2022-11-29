@@ -1,9 +1,20 @@
+import { useState } from 'react';
 import './Button.css';
 
 export function Button(properties) {
-  if (properties.primary) {
-    return <button className='primary' title={ properties.helper }>{ properties.title || 'Enviar' }</button>;
-  } else {
-    return <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg" alt="Puppy" />;
-  }
+  const [btnType, setBtnType] = useState('primary');
+
+  const handleBtnTypeChange = () => {
+    if (btnType === 'primary') setBtnType('secondary')
+    else setBtnType('primary')
+  };
+
+  return (
+    <button
+      className={`btn ${ btnType === 'primary' ? 'btn-primary' : 'btn-secondary' }`}
+      onClick={handleBtnTypeChange}
+      >
+      { btnType === 'primary' ? `Enviar` : `Cancelar` }
+    </button>
+  );
 }
